@@ -1,143 +1,86 @@
- <!doctype html>
+ <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Konsep Media Analisis dan Ulasan Maluku Utara - Penyaji: Babatopa</title>
-  <style>
-    :root{--bg:#f5f7f8;--card:#ffffff;--accent:#0b5566;--muted:#567179;--radius:12px}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.6;color:#0c2a2f;background:var(--bg)}
-    .wrap{max-width:980px;margin:18px auto;padding:16px}
-    header{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
-    .title{font-size:20px;color:var(--accent);margin:0}
-    .meta{font-size:13px;color:var(--muted)}
-    nav.toc{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-    nav.toc button{background:#eef6f8;border:0;padding:8px 12px;border-radius:999px;color:var(--accent);font-size:13px;cursor:pointer}
-    .grid{display:grid;grid-template-columns:1fr;gap:12px}
-    @media(min-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
-    .card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 8px 22px rgba(6,22,27,0.06)}
-    h2{margin:0 0 6px 0;color:#08323a;font-size:16px}
-    p{margin:8px 0;color:#153034}
-    ul,ol{margin:8px 0 8px 20px}
-    .cta-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0;font-weight:600;text-decoration:none}
-    .outline{background:transparent;border:1px solid #dfeff1;color:var(--accent);padding:10px 14px;border-radius:10px}
-    footer{margin-top:14px;color:var(--muted);font-size:13px}
-    /* Android friendly text sizes */
-    @media (max-width:420px){.title{font-size:18px}h2{font-size:15px}p{font-size:15px}}
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Suara Rakyat Sula</title>
+    <style>
+        body { margin:0; font-family:Arial, sans-serif; background:#f4f4f4; }
+        header { background:#c1272d; color:#fff; padding:25px; text-align:center; font-size:32px; font-weight:bold; }
+        .tagline { background:#1e1e1e; color:#f7d708; text-align:center; padding:10px; font-size:18px; font-weight:bold; }
+        .subtopic-bar { background:#ffffff; padding:10px 0; overflow-x:auto; white-space:nowrap; border-bottom:2px solid #ddd; }
+        .subtopic-bar a { display:inline-block; margin:0 10px; padding:10px 15px; text-decoration:none; font-weight:bold; font-size:16px; border-radius:6px; color:#fff; }
+        .subtopic-bar a:nth-child(1){background:#c1272d;} .subtopic-bar a:nth-child(2){background:#1e88e5;}
+        .subtopic-bar a:nth-child(3){background:#43a047;} .subtopic-bar a:nth-child(4){background:#fb8c00;}
+        .subtopic-bar a:nth-child(5){background:#8e24aa;} .subtopic-bar a:nth-child(6){background:#00897b;}
+        .subtopic-bar a:nth-child(7){background:#6d4c41;} .subtopic-bar a:nth-child(8){background:#3949ab;}
+        .submit-box { background:#fff; padding:18px; text-align:center; border-bottom:2px solid #ccc; font-size:16px; font-weight:bold; color:#000; }
+        .submit-box a { display:inline-block; margin-top:10px; background:#c1272d; color:#fff; padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:bold; }
+        .container { max-width:900px; margin:auto; padding:20px; }
+        .article { background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.15); margin-bottom:30px; }
+        .article h2 { color:#c1272d; margin-bottom:5px; }
+        .article .meta { color:#444; font-size:14px; margin-bottom:20px; font-style:italic; }
+        .next-articles { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:20px; margin-top:30px; }
+        .next-card { background:#ffffff; padding:15px; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.15); }
+        .next-card h3 { margin:0 0 10px; color:#c1272d; font-size:18px; }
+        .next-card .writer { font-size:14px; font-style:italic; color:#444; }
+        footer { background:#1e1e1e; color:#ccc; text-align:center; padding:20px; margin-top:40px; font-size:14px; }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1 class="title">Konsep Media Analisis dan Ulasan Maluku Utara</h1>
-      <div class="meta">Penyaji: Babatopa</div>
-    </header>
 
-    <nav class="toc" aria-label="Navigasi cepat">
-      <button data-target="latar">Latar Belakang</button>
-      <button data-target="ide">Ide & Konsep</button>
-      <button data-target="keunggulan">Keunggulan</button>
-      <button data-target="potensi">Potensi</button>
-      <button data-target="langkah">Langkah Awal</button>
-      <button data-target="strategi">Strategi Menang</button>
-      <button data-target="penutup">Penutup</button>
-    </nav>
+<header>PORTAL SUARA RAKYAT SULA</header>
+<div class="tagline">Media Jurnal dan Aspirasi Warga Sula</div>
 
-    <main class="grid">
-      <section class="card" id="latar">
-        <h2>1. Latar Belakang</h2>
-        <p>Dalam beberapa tahun terakhir, lanskap media di Maluku Utara berkembang pesat. Banyak portal berita baru bermunculan, masing-masing berlomba memberitakan peristiwa secepat mungkin. Namun di tengah derasnya arus informasi ini, masyarakat mulai menghadapi masalah baru: <strong>kebingungan dan kelelahan informasi.</strong></p>
-        <p>Berita begitu banyak, tapi sulit memahami mana yang penting, mana yang berdampak, dan apa maknanya bagi daerah. Di sinilah muncul ruang kosong — ruang untuk <strong>media yang fokus bukan pada kecepatan, tetapi pada kedalaman.</strong></p>
-      </section>
+<div class="subtopic-bar">
+    <a href="#">Pemerintahan</a>
+    <a href="#">Kebijakan Publik</a>
+    <a href="#">Opini</a>
+    <a href="#">Sosial</a>
+    <a href="#">Pendidikan</a>
+    <a href="#">Ekonomi</a>
+    <a href="#">Budaya</a>
+    <a href="#">Tokoh</a>
+</div>
 
-      <section class="card" id="ide">
-        <h2>2. Ide dan Konsep Media</h2>
-        <p>Media ini hadir dengan konsep berbeda:</p>
-        <p>Bukan sebagai media pemberitaan yang memproduksi berita langsung di lapangan, tetapi sebagai <strong>portal analisis dan ulasan</strong> terhadap berita-berita yang sudah beredar di berbagai media Maluku Utara.</p>
-        <ol>
-          <li>Menghimpun dan menyeleksi berita-berita dari media lokal yang relevan dan sedang ramai dibicarakan.</li>
-          <li>Melakukan pendalaman dan analisis dengan sudut pandang kritis, objektif, dan berbasis konteks sosial daerah.</li>
-          <li>Menyajikan ulang hasil ulasan dalam bentuk artikel reflektif, visual ringan, dan konten media sosial yang menarik.</li>
-        </ol>
-        <p>Dengan cara ini, kami tidak menjadi pesaing langsung media lain, tapi <strong>melengkapi ekosistem media</strong> di Maluku Utara — menjadi ruang refleksi, klarifikasi, dan penjelasan yang memperkaya pemahaman publik.</p>
-      </section>
+<div class="submit-box">
+    Kolom untuk menerima tulisan dari masyarakat dan para pembaca yang ingin karyanya ditampilkan di portal ini.<br>
+    <a href="https://wa.me/6281229942538">Kirim Tulisan via WA</a>
+</div>
 
-      <section class="card" id="keunggulan">
-        <h2>3. Keunggulan Model Media Ini</h2>
-        <p>Media analisis seperti ini memiliki sejumlah keunggulan strategis dibanding media konvensional:</p>
-        <ol>
-          <li><strong>Lebih Aman dan Stabil</strong><br>Karena tidak memproduksi berita lapangan langsung, risiko kesalahan fakta, tuntutan, atau konflik pemberitaan jauh lebih kecil.</li>
-          <li><strong>Lebih Berpengaruh</strong><br>Setiap isu yang dibahas akan memiliki bobot karena muncul dari hasil kurasi — hanya topik yang relevan dan penting bagi daerah yang diangkat.</li>
-          <li><strong>Menjadi Rujukan Pemerintah dan Publik</strong><br>Pemerintah dan masyarakat akan menjadikan media ini sebagai acuan, karena ulasan yang disajikan memberikan konteks dan arah berpikir.</li>
-          <li><strong>Tahan Lama dan Bernilai Tinggi</strong><br>Konten analisis tidak cepat basi. Ia tetap relevan meskipun waktu sudah berlalu, karena sifatnya mendalam dan reflektif.</li>
-          <li><strong>Lebih Adaptif terhadap Era Digital</strong><br>Dengan memanfaatkan berbagai platform seperti YouTube, TikTok, Instagram, dan Facebook, media ini bisa menyebarkan pesan yang sama dalam berbagai format — tulisan, video pendek, dan diskusi ringan.</li>
-        </ol>
-      </section>
-
-      <section class="card" id="potensi">
-        <h2>4. Potensi dan Peluang</h2>
-        <p>Potensi media seperti ini sangat besar di Maluku Utara, karena:</p>
-        <ul>
-          <li>Minim pesaing langsung. Belum ada portal lokal yang fokus pada analisis dan kurasi berita lintas media.</li>
-          <li>Kebutuhan publik akan pemahaman tinggi. Banyak masyarakat ingin tahu lebih dalam tentang isu-isu penting, bukan sekadar membaca berita mentah.</li>
-          <li>Kebutuhan pemerintah akan mitra komunikasi. Pemerintah daerah memerlukan media yang bisa menjelaskan kebijakan secara cerdas dan netral.</li>
-          <li>Peluang digital dan engagement. Konten analisis punya potensi besar untuk viral jika dikemas menarik di media sosial — apalagi jika membahas isu lokal yang sedang ramai.</li>
-        </ul>
-      </section>
-
-      <section class="card" id="langkah">
-        <h2>5. Langkah Awal Pembangunan</h2>
-        <p>Untuk memulai media ini, langkah-langkah yang realistis dapat diambil secara bertahap:</p>
-        <ol>
-          <li>Membentuk tim inti redaksi analisis, terdiri dari penulis, editor, dan pengelola konten media sosial.</li>
-          <li>Menyiapkan platform digital — website utama, akun media sosial, dan desain identitas visual yang konsisten.</li>
-          <li>Menyusun format ulasan tetap, misalnya rubrik mingguan: “Isu Pekan Ini”, “Fakta dan Makna”, atau “Opini Malut.”</li>
-          <li>Membangun jaringan dengan media lokal lain, agar akses berita lebih cepat dan mudah.</li>
-          <li>Melakukan publikasi awal dengan isu-isu yang sedang hangat, untuk menarik perhatian publik dan pemerintah.</li>
-        </ol>
-      </section>
-
-      <section class="card" id="strategi">
-        <h2>6. Strategi Bertahan dan Menang dalam Persaingan</h2>
-        <p>Dalam dunia jurnalisme Maluku Utara yang padat, strategi utama media ini untuk memenangkan perhatian publik adalah:</p>
-        <ul>
-          <li><strong>Fokus pada kualitas, bukan kuantitas.</strong> Satu ulasan yang mendalam lebih berpengaruh daripada sepuluh berita dangkal.</li>
-          <li><strong>Konsisten dan terukur.</strong> Publik akan mengenal karakter media ini sebagai media yang tenang, cerdas, dan terpercaya.</li>
-          <li><strong>Menghubungkan media dan masyarakat.</strong> Kita menjadi penghubung antara berbagai pemberitaan dengan kebutuhan publik untuk memahami arah dan maknanya.</li>
-          <li><strong>Menjadi mitra strategis pemerintah dan lembaga.</strong> Dengan gaya penyampaian yang santun, objektif, dan berimbang, media ini bisa menjadi ruang komunikasi publik yang membangun, bukan menyerang.</li>
-        </ul>
-      </section>
-
-      <section class="card" id="penutup">
-        <h2>7. Penutup</h2>
-        <p>Media ini bukan sekadar portal berita baru, tapi <strong>satu gagasan baru dalam jurnalisme daerah</strong>. Kita tidak berlari mengejar kecepatan, tapi membangun pengaruh lewat kedalaman. Kita tidak berdebat tentang siapa yang pertama, tapi siapa yang paling mampu memberi makna.</p>
-        <p>Inilah saatnya Maluku Utara memiliki media yang bisa menjadi <strong>ruang refleksi, pusat opini, dan acuan berpikir publik</strong>. Sebuah media yang hadir bukan untuk bersaing dalam keramaian, tapi untuk <strong>menuntun arah percakapan</strong> di daerah ini.</p>
-      </section>
-
-    </main>
-
-    <div class="cta-row">
-      <a class="btn" href="#langkah">Mulai Langkah Awal</a>
-      <a class="outline" href="#strategi">Lihat Strategi</a>
+<div class="container">
+    <div class="article">
+        <h2>Hari-hari Menjelang Kongres HPMS di Ternate</h2>
+        <div class="meta">Sub-topik: Pemerintahan • by: Dr. Mochtar Umasugi</div>
+        <p>Hari-hari menjelang Kongres Himpunan Pelajar Mahasiswa Sula (HPMS) di Ternate selalu menghadirkan suasana yang berbeda...</p>
+        <p><strong>Di teras rumah ba'da magrib<br>Fagudu, 26 November 2025</strong></p>
     </div>
 
-    <footer>
-      <p>Dokumen ini disusun untuk keperluan presentasi konsep media. Semua kata dan kalimat dipertahankan sesuai permintaan; hanya ditambahkan penyaji: Babatopa.</p>
-    </footer>
-  </div>
+    <h2 style="color:#c1272d; margin-top:40px;">Tulisan Berikutnya</h2>
 
-  <script>
-    // Smooth navigation
-    document.querySelectorAll('nav.toc button').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        const id=btn.getAttribute('data-target');
-        const el=document.getElementById(id);
-        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-      });
-    });
-  </script>
+    <div class="next-articles">
+        <div class="next-card">
+            <h3>Judul Tulisan</h3>
+            <div class="writer">penulis: (isi nanti)</div>
+        </div>
+        <div class="next-card">
+            <h3>Judul Tulisan</h3>
+            <div class="writer">penulis: (isi nanti)</div>
+        </div>
+        <div class="next-card">
+            <h3>Judul Tulisan</h3>
+            <div class="writer">penulis: (isi nanti)</div>
+        </div>
+        <div class="next-card">
+            <h3>Judul Tulisan</h3>
+            <div class="writer">penulis: (isi nanti)</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+  Copyright 2025 • Develop by KK D
+</footer>
+
 </body>
- </html>
- 
+</html>
